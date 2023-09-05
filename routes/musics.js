@@ -12,5 +12,6 @@ router.get('/new', ensureLoggedIn, musicsCtrl.new);
 router.get('/:id', musicsCtrl.show);
 // POST /musics
 router.post('/', ensureLoggedIn, musicsCtrl.create);
+router.delete('/:id', musicsCtrl.delete);
 	
 module.exports = router;

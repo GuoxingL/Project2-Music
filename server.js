@@ -31,10 +31,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
-const locals = {
-  title: 'New Music',
-};
-
+app.get('/musics/new', (req, res) => {
+  const title = 'New Music'; // Set the title variable as needed
+  const user = req.user; 
+  console.log('Title:', title);
+  console.log('User:', user);
+  res.render('musics/new', { title, user });
+});
 
 app.use(session({
   secret: process.env.SECRET,

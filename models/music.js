@@ -46,11 +46,11 @@ const musicSchema = new Schema({
     type: String,
     required: true
   },
-  cast: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Location'
-  }],
-  nowShowing: { type: Boolean, default: true },
+  // location: [{
+  //   type: Schema.Types.ObjectId,
+  //   ref: 'Location'
+  // }],
+  nowShowing: { type: String, default: 'true' },
   reviews: [reviewSchema]
 }, {
   timestamps: true
