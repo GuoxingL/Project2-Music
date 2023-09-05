@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+<table id="list">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Release<br>Year</th>
+      <th>Style</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% musics.forEach(function(m) { %>
+      <tr>
+        <td><%= m.title %></td>
+        <td><%= m.releaseYear %></td>
+        <td><%= m.style %></td>
+        <td><a href="/musics/<%= m._id %>">DETAILS</a></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+<%- include('../partials/footer') %>
+
