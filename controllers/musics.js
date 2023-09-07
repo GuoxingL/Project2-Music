@@ -6,7 +6,8 @@ module.exports = {
   new: newMusic,
   delete: deleteMusic,
   create,
-  edit
+  edit,
+  update
 };
 
 async function index(req, res) {
@@ -65,7 +66,23 @@ async function edit(req, res) {
     if (!music) {
       return res.status(404).send('Music not found');
     }
-    res.render('musics/edit');
+    res.render('musics/edit',{ music,title: '' });
+  } catch (err) {
+    console.error(err); // Log the error for debugging
+    res.status(500).send('Internal Server Error');
+  }
+}
+
+async function update(req, res) {
+  try {
+
+    const music = await Music.findByIdAndUpdate(req.params.id, req.body, { new: true });
+
+    if (!music) {
+      return res.status(404).send('Music not found');
+    }
+
+    res.redirect('/musics');
   } catch (err) {
     console.error(err);
     res.status(500).send('Internal Server Error');

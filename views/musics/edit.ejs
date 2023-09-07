@@ -2,7 +2,7 @@
 
 <h1>Edit Music</h1>
 
-<form action="/musics/<%= music._id %>" method="POST">
+<form action="/musics/<%= music._id %>?_method=PUT" method="POST">
     <label>Title:</label>
     <input type="text" name="title">
     <label>Release Year:</label>
@@ -23,8 +23,10 @@
     <label>Now Showing:</label>
     <input type="checkbox" name="nowShowing" value="true" checked>
   
-
+ 
   <button type="submit" class="btn btn-primary">Save Changes</button>
+
+  </form>
 </form>
 
 <%- include('../partials/footer') %>

@@ -8,11 +8,14 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 router.get('/', musicsCtrl.index);
 // GET /musics/new
 router.get('/new', ensureLoggedIn, musicsCtrl.new);
-// GET /musics/:id 
+// GET /musics/:id/edit (move this above the /musics/:id route)
+router.get('/:id/edit', ensureLoggedIn, musicsCtrl.edit);
+router.put('/:id', ensureLoggedIn, musicsCtrl.update);
+// GET /musics/:id (keep this here)
 router.get('/:id', musicsCtrl.show);
 // POST /musics
 router.post('/', ensureLoggedIn, musicsCtrl.create);
 router.delete('/:id', musicsCtrl.delete);
-router.get('/musics/:id/edit', ensureLoggedIn, musicsCtrl.edit);
+
 	
 module.exports = router;
