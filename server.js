@@ -8,7 +8,7 @@ var passport = require('passport');
 var methodOverride = require('method-override')
 
 require('dotenv').config();
-// connect to the database with AFTER the config vars are processed
+
 require('./config/database');
 
 require('./config/passport');
@@ -31,6 +31,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
+
+
 app.get('/musics/new', (req, res) => {
   const title = 'New Music'; // Set the title variable as needed
   const user = req.user; 
@@ -44,6 +46,11 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
+
+// app.get('/', (req, res) => {
+ 
+//   res.render('home', { title: 'Home Page' }); 
+// });
 
 app.use(passport.initialize());
 app.use(passport.session());

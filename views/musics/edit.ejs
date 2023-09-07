@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+
+<h1>Edit Music</h1>
+
+<form action="/musics/<%= music._id %>" method="POST">
+    <label>Title:</label>
+    <input type="text" name="title">
+    <label>Release Year:</label>
+    <input type="text" name="releaseYear">
+    <label>Style:</label>
+    <select name="style">
+      <option value="Pop">Pop</option>
+      <option value="Rock">Rock</option>
+      <option value="Hip-hop/Rap">Hip-hop/Rap</option>
+      <option value="Country">Country</option>
+      <option value="Jazz">Jazz</option>
+      <option value="Classical">Classical</option>
+    </select>
+    <label>Singer:</label>
+    <input type="text" name="singer">
+    <label>Quotes:</label>
+    <input type="text" name="quotes">
+    <label>Now Showing:</label>
+    <input type="checkbox" name="nowShowing" value="true" checked>
+  
+
+  <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+
+<%- include('../partials/footer') %>

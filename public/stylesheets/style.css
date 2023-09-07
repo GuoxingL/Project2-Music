@@ -3,6 +3,53 @@
   font-family: Helvetica;
   color: #424748;
 }
+.container{
+  width:100%;
+  height:100vh;
+  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngtree.com%2Ffree-music-background&psig=AOvVaw0HA2PUm1KyMT3auaUe7ZEo&ust=1694130383846000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCOi-08-Vl4EDFQAAAAAdAAAAABAG");
+  background-size: cover;
+
+}
+.card{
+  width: 200px;
+  height: 250px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+  margin: 10px 15px;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s ease; 
+}
+.card:hover{
+  transform:translateY(-15px) ;
+}
+.card1{
+  background-image: url("https://i1.sndcdn.com/artworks-000398198052-w4hp1z-t500x500.jpg");
+}
+.card2{
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/022/090/012/small/rock-and-roll-music-vintages-tshirt-design-free-vector.jpg")
+
+}
+.card3{
+  background-image: url("https://m.media-amazon.com/images/I/91LGwMSE1kL._AC_UF1000,1000_QL80_.jpg");
+  
+}.card4{
+  background-image: url("https://img.freepik.com/free-vector/hand-drawn-country-music-illustration_52683-86250.jpg");
+  
+}.card5{
+  background-image: url("https://getwallpapers.com/wallpaper/full/3/5/9/203127.jpg");
+  
+}.card6{
+  background-image: url("https://images.pexels.com/photos/210854/pexels-photo-210854.jpeg?cs=srgb&dl=pexels-pixabay-210854.jpg&fm=jpg");
+  
+}
+h5,p{
+  color:white;
+}
 
 body {
   margin: 0;
@@ -26,6 +73,8 @@ body > nav {
   background-repeat: no-repeat; 
   background-position: center; 
 }
+
+
 
 nav > img {
   width: 34px;

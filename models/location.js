@@ -12,8 +12,11 @@ const locationSchema = new Schema({
       unique:true
   },
   concertDate: Date
-}, {
+}, 
+{
   timestamps: true
 });
+
+
 
 module.exports = mongoose.model('Location', locationSchema);

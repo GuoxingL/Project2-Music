@@ -10,8 +10,9 @@
 <body>
   <nav>
 
-    <a href="/musics" <%- title === 'All Music' ? 'class="active"' : '' %>>ALL MUSICS</a>
+    <a href="/" >Home</a>
     <% if (user) { %>
+      <a href="/musics" <%- title === 'All Music' ? 'class="active"' : '' %>>ALL MUSICS</a>
       <a href="/locations/new"	<%- title === 'Add Locations' ? 'class="active"' : '' %>>
       ADD LOCATION</a>
       <a href="/musics/new" <%- title === 'Add Music' ? 'class="active"' : '' %>>ADD MUSICS</a>

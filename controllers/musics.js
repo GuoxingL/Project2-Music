@@ -1,63 +1,73 @@
 const Music = require('../models/music');
-// const Location = require('../models/location');
 
 module.exports = {
   index,
   show,
   new: newMusic,
-  delete:deleteMusic,
-  create
+  delete: deleteMusic,
+  create,
+  edit
 };
 
 async function index(req, res) {
-  const musics = await Music.find({});
-  res.render('musics/index', { title: 'All Musics', musics });
+  try {
+    const musics = await Music.find({});
+    res.render('musics/index', { title: 'All Musics', musics });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Internal Server Error');
+  }
 }
 
 async function show(req, res) {
-  
-  const music = await Music.findById(req.params.id)
-
-  // const locations = await Location.find({ _id: { $nin: music.cast } }).sort('name');
-  res.render('musics/show', { title: 'Music Detail', music });
+  try {
+    const music = await Music.findById(req.params.id);
+    if (!music) {
+      return res.status(404).send('Music not found');
+    }
+    res.render('musics/show', { title: 'Music Detail', music });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Internal Server Error');
+  }
 }
 
 async function deleteMusic(req, res) {
   try {
     const music = await Music.findByIdAndDelete(req.params.id);
     if (!music) {
-      // Handle the case where the music was not found
-      return res.redirect('/musics');
+      return res.status(404).send('Music not found');
     }
-    console.log(music);
     res.redirect('/musics');
   } catch (err) {
-    // Handle any errors that occurred during the deletion
     console.error(err);
-    res.redirect('/musics');
+    res.status(500).send('Internal Server Error');
   }
 }
 
 function newMusic(req, res) {
-
   res.render('musics/new', { title: 'Add Music', errorMsg: '' });
 }
 
 async function create(req, res) {
-  console.log(req.body)
-
-  // req.body.nowShowing = !!req.body.nowShowing;
-  
-  // for (let key in req.body) {
-  //   if (req.body[key] === '') delete req.body[key];
-  // }
   try {
-    await Music.create(req.body);
-    
-    res.redirect(`/musics/`);
+    const newMusic = await Music.create(req.body);
+    res.redirect(`/musics/${newMusic._id}`);
   } catch (err) {
-    
-    console.log(err);
-    res.render('musics/new', { errorMsg: err.message });
+    console.error(err);
+    res.render('musics/new', { title: 'Add Music', errorMsg: err.message });
+  }
+}
+
+async function edit(req, res) {
+  try {
+    const music = await Music.findById(req.params.id);
+    if (!music) {
+      return res.status(404).send('Music not found');
+    }
+    res.render('musics/edit');
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Internal Server Error');
   }
 }

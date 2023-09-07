@@ -3,13 +3,16 @@ const router = express.Router();
 const locationsCtrl = require('../controllers/locations');
 const ensureLoggedIn = require('../config/ensureLoggedIn');
 
-// This router is mounted to a "starts with" path of '/'
-
-// GET /locations/new (new functionality)
+// GET /locations/new
 router.get('/locations/new', ensureLoggedIn, locationsCtrl.new);
-// POST /locations (create functionality)
+
+// POST /locations
 router.post('/locations', ensureLoggedIn, locationsCtrl.create);
-// POST /musics/:id/locations (associate a location with a music)
-router.post('/muisics/:id/locations', ensureLoggedIn, locationsCtrl.addToLocation);
+
+// POST /musics/:id/locations (assuming "musics" is correct)
+router.post('/musics/:id/locations', ensureLoggedIn, locationsCtrl.addToLocation);
+
+// DELETE /locations/:id (assuming this should delete a specific location)
+router.delete('/locations/:id', ensureLoggedIn, locationsCtrl.delete);
 
 module.exports = router;

@@ -1,9 +1,15 @@
 <%- include('../partials/header') %>
 
 <div>Please check the following list before adding a new location and concert date:</div>
+
 <section id="badge-container">
-  <% locations.forEach(function(l) { %>
-    <article class="badge"><%= l.name %> - <%= l.concertDate %></article>
+  <% locations.forEach(function(location) { %>
+    <article class="badge">
+      <%= location.name %> - <%= location.concertDate %>
+      <form action="/locations/<%= location._id %>?_method=DELETE" method="POST" style="display: inline;">
+        <button type="submit">X</button>
+      </form>
+    </article>
   <% }) %>
 </section>
 
@@ -11,7 +17,7 @@
   <label>Name:</label>
   <input type="text" name="name">
   <label>Location:</label>
-  <input type ="text" name="location">
+  <input type="text" name="location">
   <label>Concert Date:</label>
   <input type="date" name="concertDate">
   <input type="submit" value="Add Location">

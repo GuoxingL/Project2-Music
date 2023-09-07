@@ -46,10 +46,6 @@ const musicSchema = new Schema({
     type: String,
     required: true
   },
-  // location: [{
-  //   type: Schema.Types.ObjectId,
-  //   ref: 'Location'
-  // }],
   nowShowing: { type: String, default: 'true' },
   reviews: [reviewSchema]
 }, {

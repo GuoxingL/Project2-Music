@@ -3,7 +3,7 @@ const router = express.Router();
 const reviewsCtrl = require('../controllers/reviews');
 const ensureLoggedIn = require('../config/ensureLoggedIn');
 
-// POST /musics/:id/reviews (create review for a music)
+// POST /musics/:id/reviews 
 router.post('/musics/:id/reviews', ensureLoggedIn, reviewsCtrl.create);
 // DELETE /reviews
 router.delete('/reviews/:id', ensureLoggedIn, reviewsCtrl.delete);
