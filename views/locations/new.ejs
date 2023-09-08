@@ -1,12 +1,16 @@
 <%- include('../partials/header') %>
 
+<body id="page-background5"></body>
+
 <div>Please check the following list before adding a new location and concert date:</div>
 
 <section id="badge-container">
   <% locations.forEach(function(location) { %>
     <article class="badge">
-      <%= location.name %> - <%= location.concertDate %>
-      <form action="/locations/<%= location._id %>?_method=DELETE" method="POST" style="display: inline;">
+      <p class="badge-name"><%= location.name %></p>
+      <p class="badge-location"><%= location.location %></p>
+      <p class="badge-concert-date"><%= location.concertDate %></p>
+      <form action="/locations/<%= location._id %>?_method=DELETE" method="POST" class="badge-form">
         <button type="submit">X</button>
       </form>
     </article>
@@ -22,5 +26,7 @@
   <input type="date" name="concertDate">
   <input type="submit" value="Add Location">
 </form>
+
+</body>
 
 <%- include('../partials/footer') %>

@@ -9,13 +9,11 @@
 </head>
 <body>
   <nav>
-
-    <a href="/" >Home</a>
+    <a href="/">HOME</a>
     <% if (user) { %>
-      <a href="/musics" <%- title === 'All Music' ? 'class="active"' : '' %>>ALL MUSICS</a>
-      <a href="/locations/new"	<%- title === 'Add Locations' ? 'class="active"' : '' %>>
-      ADD LOCATION</a>
-      <a href="/musics/new" <%- title === 'Add Music' ? 'class="active"' : '' %>>ADD MUSICS</a>
+      <a href="/musics" <%= title === 'All Music' ? 'class="active"' : '' %>>ALL MUSICS</a>
+      <a href="/locations/new" <%= title === 'Add Locations' ? 'class="active"' : '' %>>ADD LOCATION</a>
+      <a href="/musics/new" <%= title === 'Add Music' ? 'class="active"' : '' %>>ADD MUSIC</a>
       <a href="/logout">LOG OUT</a>
     <% } else { %>
       <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>

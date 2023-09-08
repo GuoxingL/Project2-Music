@@ -6,7 +6,7 @@
 #container{
   width:100%;
   height:100vh;
-  background-image: url('https://t4.ftcdn.net/jpg/05/15/77/39/360_F_515773972_IH759yGiOyAdQLtr2qdpMh71QVNely9C.jpg');
+  background-image: url('https://img.freepik.com/premium-photo/volumetric-musical-background-with-treble-clef-notes-generative-ai_169016-29574.jpg');
   background-size: cover;
 }
 .card{
@@ -22,6 +22,7 @@
   background-position: center;
   background-size: cover;
   transition: transform 0.5s ease; 
+  margin-left: 50px;
 }
 
 
@@ -29,23 +30,24 @@
   transform:translateY(-15px) ;
 }
 .card1{
-  background-image: url("https://i1.sndcdn.com/artworks-000398198052-w4hp1z-t500x500.jpg");
+  background-image: url("https://cdn.wallpapersafari.com/96/21/swaTN6.png");
 }
 .card2{
-  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/022/090/012/small/rock-and-roll-music-vintages-tshirt-design-free-vector.jpg")
+  background-image: url("https://as1.ftcdn.net/v2/jpg/02/46/30/52/1000_F_246305227_EkcTMqNq7bce3csZPwgnEexhML05JaWN.jpg")
 
 }
 .card3{
-  background-image: url("https://m.media-amazon.com/images/I/91LGwMSE1kL._AC_UF1000,1000_QL80_.jpg");
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1p4QVSsfSPBrQUwgBpLoBa1HI2TjkWn4hA&usqp=CAU");
+
   
 }.card4{
-  background-image: url("https://img.freepik.com/free-vector/hand-drawn-country-music-illustration_52683-86250.jpg");
+  background-image: url("https://media.istockphoto.com/id/1296195639/vector/country-music-sign-cowboy-hat-with-guitar-live-music-on-black-background.jpg?s=612x612&w=0&k=20&c=rnnWjwQwwNcVh8NYORFSld8wAV-kwZECGXhthVPQ1Do=");
   
 }.card5{
-  background-image: url("https://getwallpapers.com/wallpaper/full/3/5/9/203127.jpg");
+  background-image: url("https://e1.pxfuel.com/desktop-wallpaper/463/804/desktop-wallpaper-4-jazz-music-saxophone-black-thumbnail.jpg");
   
 }.card6{
-  background-image: url("https://images.pexels.com/photos/210854/pexels-photo-210854.jpeg?cs=srgb&dl=pexels-pixabay-210854.jpg&fm=jpg");
+  background-image: url("https://e0.pxfuel.com/wallpapers/611/451/desktop-wallpaper-classical-music-musical.jpg");
   
 }
 h5,p{
@@ -84,33 +86,48 @@ nav a {
   margin-left: 5px; 
 }
 
+.music-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-.table-row {
-    width: 200px;
-    height: 250px;
-    display: inline-block;
-    border-radius: 10px;
-    padding: 15px 25px;
-    box-sizing: border-box;
-    cursor: pointer;
-    text-align: center;
-    margin: 10px 15px;
-    background-position: center;
-    background-size: cover;
-    transition: transform 0.5s ease;
+.music-item {
+  width: calc(33.33% - 20px); /* Adjust the width as needed */
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color:lightblue;
+  transition: transform 0.5s ease; 
+
+}
+
+.music-info {
+  text-align: left;
+}
+
+.music-title {
+  font-weight: bold;
+}
+
+.music-details {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.music-details a {
+  text-decoration: none;
+  color: #748fab;
+  font-weight: bold;
 }
 
 
-.table-row a {
-  text-decoration: none; 
-  color: #007BFF; 
-  font-weight: bold; 
-}
 #show-page {
-  background-color: #f8f9fa; /* Light gray background color */
+ 
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle elevation effect */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
 }
 
 #show-page div {
@@ -119,8 +136,8 @@ nav a {
 
 /* Style for the "Edit" button */
 .btn.btn-primary {
-  background-color: #007bff; /* Blue background color */
-  color: white; /* White text color */
+  background-color: #007bff; 
+  color: white; 
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
@@ -130,14 +147,14 @@ nav a {
 
 /* Style for the "Edit" button on hover */
 .btn.btn-primary:hover {
-  background-color: #0056b3; /* Darker blue background color on hover */
+  background-color: #0056b3; 
 }
 /* Style for the "Add Review" form */
 #add-review-form {
-  background-color: #f8f9fa; /* Light gray background color */
+  background-color: #f8f9fa; 
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle elevation effect */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
 }
 
 #add-review-form label {
@@ -162,8 +179,8 @@ nav a {
 }
 
 #add-review-form input[type="submit"] {
-  background-color: #007bff; /* Blue background color */
-  color: white; /* White text color */
+  background-color: #007bff; 
+  color: white; 
   border: none;
   border-radius: 5px;
   padding: 10px 15px;
@@ -177,15 +194,15 @@ table {
   margin-top: 20px;
 }
 
-th, td {
+th {
   border: 1px solid #ccc;
   padding: 10px;
   text-align: left;
 }
 
 th {
-  background-color: #007bff; /* Blue background color for table headers */
-  color: white; /* White text color for table headers */
+  background-color: #007bff; 
+  color: white; 
 }
 
 /* Style for the user's avatar in reviews */
@@ -198,8 +215,8 @@ th {
 
 /* Style for the "Delete" button in reviews */
 table form button[type="submit"] {
-  background-color: #dc3545; /* Red background color */
-  color: white; /* White text color */
+  background-color: #dc3545; 
+  color: white; 
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
@@ -224,41 +241,67 @@ table tbody tr:last-child td:last-child {
   font-weight: bold;
 }
 
-#add-review-form,
-#add-location-form {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1rem;
-  margin-bottom: 2rem;
-}
 
-#add-review-form input[type="submit"],
-#add-location-form input[type="submit"]  {
-  width: 10rem;
-  grid-column: 2 / 3;
-}
+
+
 
 hr {
   color: #424748
 }
 
+
+
 #badge-container {
   display: flex;
-  flex-wrap: wrap;
-  width: 50%;
-  border: 2px solid #B8C0C2;
-  border-radius: .5rem;
-  margin: .5rem 0 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
+
 .badge {
-  background-color: white;
-  padding: .5rem;
-  margin: .5rem;
-  border-radius: .3rem;
-  font-size: .8rem;
-  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px; 
+  background-image: url("https://wallpaperboat.com/wp-content/uploads/2020/04/cute-music-02.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color:#333;
 }
+
+/* Style badge item elements */
+.badge-name,
+.badge-location,
+.badge-concert-date {
+  margin: 0;
+}
+
+.badge-form {
+  margin-left: 10px;
+}
+
+.badge-form button {
+  background-color: #ff0000; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.badge-form button:hover {
+  background-color: #cc0000; 
+}
+
 
 #show-page ul {
   margin: 0 0 2rem;
@@ -269,62 +312,6 @@ hr {
 #show-page li {
   font-weight: bold;
 }
-/* Style for the form container */
-#new-form {
-  background-color: #f8f9fa; /* Light gray background color */
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle elevation effect */
-  width: 300px; /* Adjust the width as needed */
-  margin: 0 auto; /* Center the form horizontally */
-}
-
-/* Style for labels */
-#new-form label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-/* Style for text input fields */
-#new-form input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-/* Style for the select field */
-#new-form select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-/* Style for the checkbox */
-#new-form input[type="checkbox"] {
-  margin-right: 5px;
-}
-
-/* Style for the submit button */
-#new-form input[type="submit"] {
-  background-color: #007bff; /* Blue background color */
-  color: white; /* White text color */
-  border: none;
-  border-radius: 5px;
-  padding: 10px 15px;
-  cursor: pointer;
-  width: 100%;
-}
-
-/* Style for the submit button on hover */
-#new-form input[type="submit"]:hover {
-  background-color: #0056b3; /* Darker blue background color on hover */
-}
-
 
 
 .login img {
@@ -348,15 +335,9 @@ div {
   margin-bottom: 20px;
 }
 
-/* Style for the badge container */
-#badge-container {
-  display: flex;
-  flex-wrap: wrap;
-}
 
-/* Style for each badge */
 .badge {
-  background-color: #f8f9fa; /* Light gray background color */
+  background-color: #f8f9fa; 
   padding: 10px;
   border-radius: 5px;
   margin: 5px;
@@ -364,7 +345,6 @@ div {
   align-items: center;
 }
 
-/* Style for the badge content */
 .badge article {
   flex-grow: 1;
 }
@@ -376,34 +356,265 @@ div {
 }
 
 .badge button[type="submit"] {
-  background-color: #dc3545; /* Red background color */
-  color: white; /* White text color */
+  background-color: #dc3545; 
+  color: white; 
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
 }
 
-/* Style for the "Add Location" form */
 #add-location-form {
-  background-color: #f8f9fa; /* Light gray background color */
+  max-width: 400px; 
+  margin: 0 auto; 
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#add-location-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#add-location-form input[type="text"],
+#add-location-form input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#add-location-form input[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#add-location-form input[type="submit"]:hover {
+  background-color: #0056b3; 
+}
+
+body#page-background1 {
+  background-image: url("https://www.mcislanguages.com/wp-content/uploads/2021/06/iStock-817420656.jpg");
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
+
+#new-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style labels */
+#new-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#new-form input[type="text"],
+#new-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style checkbox */
+#new-form input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+#new-form input[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#new-form input[type="submit"]:hover {
+  background-color: #0056b3; 
+}
+
+
+.delete-form {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.btn.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+
+#show-page {
+  margin-top: 20px;
+  border: 1px solid #ccc;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle elevation effect */
-  width: 300px; /* Adjust the width as needed */
-  margin: 20px 0;
+}
+
+.music-detail {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.detail-label {
+  flex: 1;
+  font-weight: bold;
+}
+
+.detail-value {
+  flex: 3;
+}
+
+
+.edit-button {
+  display: inline-block;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+/* Main Heading */
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#add-review-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+#add-review-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Form Inputs */
+#add-review-form textarea,
+#add-review-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Form Submit Button */
+#add-review-form input[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#add-review-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Reviews Container */
+.reviews-container {
+  margin-top: 20px;
+}
+
+.reviews-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.review-card {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-user img {
+  max-width: 30px;
+  margin-right: 10px;
+}
+
+/* Review Content */
+.review-content {
+  margin-top: 10px;
+}
+
+/* Review Rating */
+.review-rating {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.review-actions form button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Average Rating */
+.average-rating {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.container1 {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff; 
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Style for labels */
-#add-location-form label {
+.form-group label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-/* Style for text input fields */
-#add-location-form input[type="text"],
-#add-location-form input[type="date"] {
+.form-control {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -411,18 +622,63 @@ div {
   margin-bottom: 10px;
 }
 
-/* Style for the submit button in the "Add Location" form */
-#add-location-form input[type="submit"] {
-  background-color: #007bff; /* Blue background color */
-  color: white; /* White text color */
+.form-group input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
   border: none;
   border-radius: 5px;
   padding: 10px 15px;
   cursor: pointer;
-  width: 100%;
 }
 
 /* Style for the submit button on hover */
-#add-location-form input[type="submit"]:hover {
-  background-color: #0056b3; /* Darker blue background color on hover */
+.btn:hover {
+  background-color: #0056b3;
 }
+
+/* Footer styles (customize as needed) */
+footer {
+  background-color: #007bff; 
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+body#page-background2 {
+  background-image: url("https://t3.ftcdn.net/jpg/02/23/60/54/360_F_223605406_nGKtPp42ZRx4ZxvrcVeT3Ek6V5Uw4ETh.jpg");
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
+body#page-background3 {
+  background-image: url("https://cdn.wallpapersafari.com/21/63/Bgji35.jpg");
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
+
+body#page-background4 {
+  background-image: url("https://wallpaperboat.com/wp-content/uploads/2020/04/cute-music-02.jpg");
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
+
+body#page-background5 {
+  background-image: url("https://c1.wallpaperflare.com/preview/912/418/398/book-hymnal-church-pitched.jpg");
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
+
+
+

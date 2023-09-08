@@ -2,31 +2,43 @@
 
 <h1>Edit Music</h1>
 
-<form action="/musics/<%= music._id %>?_method=PUT" method="POST">
-    <label>Title:</label>
-    <input type="text" name="title">
-    <label>Release Year:</label>
-    <input type="text" name="releaseYear">
-    <label>Style:</label>
-    <select name="style">
-      <option value="Pop">Pop</option>
-      <option value="Rock">Rock</option>
-      <option value="Hip-hop/Rap">Hip-hop/Rap</option>
-      <option value="Country">Country</option>
-      <option value="Jazz">Jazz</option>
-      <option value="Classical">Classical</option>
-    </select>
-    <label>Singer:</label>
-    <input type="text" name="singer">
-    <label>Quotes:</label>
-    <input type="text" name="quotes">
-    <label>Now Showing:</label>
-    <input type="checkbox" name="nowShowing" value="true" checked>
-  
- 
-  <button type="submit" class="btn btn-primary">Save Changes</button>
-
+<body id="page-background2">
+<div class="container1">
+  <form action="/musics/<%= music._id %>?_method=PUT" method="POST" class="edit-form">
+      <div class="form-group">
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" class="form-control">
+      </div>
+      <div class="form-group">
+          <label for="releaseYear">Release Year:</label>
+          <input type="text" id="releaseYear" name="releaseYear" class="form-control">
+      </div>
+      <div class="form-group">
+          <label for="style">Style:</label>
+          <select id="style" name="style" class="form-control">
+              <option value="Pop">Pop</option>
+              <option value="Rock">Rock</option>
+              <option value="Hip-hop/Rap">Hip-hop/Rap</option>
+              <option value="Country">Country</option>
+              <option value="Jazz">Jazz</option>
+              <option value="Classical">Classical</option>
+          </select>
+      </div>
+      <div class="form-group">
+          <label for="singer">Singer:</label>
+          <input type="text" id="singer" name="singer" class="form-control">
+      </div>
+      <div class="form-group">
+          <label for="quotes">Quotes:</label>
+          <input type="text" id="quotes" name="quotes" class="form-control">
+      </div>
+      <div class="form-group">
+          <label for="nowShowing">Now Showing:</label>
+          <input type="checkbox" id="nowShowing" name="nowShowing" value="true" checked>
+      </div>
+      <button type="submit" class="btn btn-primary">Save Changes</button>
   </form>
-</form>
+</div>
+</body>
 
 <%- include('../partials/footer') %>

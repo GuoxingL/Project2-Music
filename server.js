@@ -33,13 +33,7 @@ app.use(methodOverride('_method'));
 
 
 
-app.get('/musics/new', (req, res) => {
-  const title = 'New Music'; // Set the title variable as needed
-  const user = req.user; 
-  console.log('Title:', title);
-  console.log('User:', user);
-  res.render('musics/new', { title, user });
-});
+
 
 app.use(session({
   secret: process.env.SECRET,
@@ -47,10 +41,7 @@ app.use(session({
   saveUninitialized: true
 }));
 
-// app.get('/', (req, res) => {
- 
-//   res.render('home', { title: 'Home Page' }); 
-// });
+
 
 app.use(passport.initialize());
 app.use(passport.session());
