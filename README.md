@@ -5,7 +5,7 @@ This app is a music app that requires the user to sign in with his/her Gmail acc
 ![Imgur](https://i.imgur.com/gsU1VEh.jpg[/img])
 
 # App Start
-https://projectmusic-e5fd035d2d4e.herokuapp.com/
+https://projectmusic2-13acf8edc1e9.herokuapp.com/
 
 # How to work on this App
 This app is a music app that requires the user to sign in with his/her Gmail account. The app allows users to add ,delete and edit music titles, singers, release years, and quotes. If a user deletes music, it will be removed from all music lists. When a user edits the music's information, it jumps to the edit's page and shows the music's information can be changed and saved. Users also can delete and create concert details.  This app allows users to view all music shows. Users avaulable for users to review and rate the music.
